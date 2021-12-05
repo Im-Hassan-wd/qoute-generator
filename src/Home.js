@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import QuoteDetails from "./QuoteDatails";
 
 const Home = () => {
     const [quotes, setQuotes] = useState(null);
@@ -24,6 +25,7 @@ const Home = () => {
         <div className="home">
             {isLoading && <div>Loading...</div>}
             {error && <div>{ error }</div>}
+            {quotes && <QuoteDetails quotes={quotes}/>}
         </div>
     );
 }

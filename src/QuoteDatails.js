@@ -1,6 +1,8 @@
 const QuoteDetails = () => {
     return (
-        <div className="quote-details"></div>
+        <div className="quote-details">
+            
+        </div>
     );
 }
  
