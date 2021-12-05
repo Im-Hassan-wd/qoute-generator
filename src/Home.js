@@ -15,6 +15,8 @@ const Home = () => {
          })
          .then(data => {
             setQuotes(data);
+            setError(false);
+            setIsLoading(false);
          })
     })
 
