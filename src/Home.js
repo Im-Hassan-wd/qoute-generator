@@ -8,14 +8,20 @@ const Home = () => {
     useEffect(() => {
         fetch("http://localhost:8000/quote")
          .then(res => {
-             if(!res === "ok") {
-             }
+            if(!res.ok) {
+                throw Error("could not fetch the data for that resource");
+            }
+            return res.json();
+         })
+         .then(data => {
+            setQuotes(data);
          })
     })
 
     return (
         <div className="home">
-            
+            {isLoading && <div>Loading...</div>}
+            {error && <div>{ error }</div>}
         </div>
     );
 }
