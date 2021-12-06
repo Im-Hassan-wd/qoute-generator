@@ -19,13 +19,13 @@ const Home = () => {
             setError(false);
             setIsLoading(false);
          })
-    })
+    }, []);
 
     return (
         <div className="home">
             {isLoading && <div>Loading...</div>}
             {error && <div>{ error }</div>}
-            {quotes && <QuoteDetails quotes={quotes}/>}
+            {quotes && <QuoteDetails quotes={quotes.filter(quote => quote.id === Math.ceil(Math.random() * 3))}/>}
         </div>
     );
 }
