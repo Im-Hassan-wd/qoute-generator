@@ -1,6 +1,8 @@
 const Navbar = () => {
     return (
-        <div className="navbar"></div>
+        <div className="navbar">
+            <button>random</button>
+        </div>
     );
 }
  
