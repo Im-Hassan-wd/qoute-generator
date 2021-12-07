@@ -9,6 +9,7 @@ const Home = () => {
     const handleFilter = () => {
         const randomNumber = Math.ceil(Math.random() * 3);
         const randomQuote = quotes.filter(quote => quote.id === randomNumber);
+        setQuotes(randomQuote);
     }
 
     useEffect(() => {
