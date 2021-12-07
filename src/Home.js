@@ -6,6 +6,10 @@ const Home = () => {
     const [isLoading, setIsLoading,] = useState(true);
     const [error, setError] = useState(false);
 
+    const handleFilter = () => {
+        const randomQuote = quotes.filter(quote => quote.id === randomNumber);
+    }
+
     useEffect(() => {
         fetch("http://localhost:8000/quote")
          .then(res => {
