@@ -7,6 +7,7 @@ const Home = () => {
     const [error, setError] = useState(false);
 
     const handleFilter = () => {
+        const randomNumber = Math.ceil(Math.random() * 3);
         const randomQuote = quotes.filter(quote => quote.id === randomNumber);
     }
 
