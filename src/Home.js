@@ -12,6 +12,7 @@ const Home = () => {
         const randomNumber = Math.ceil(Math.random() * 3);
         const randomQuote = quotes.filter(quote => quote.id === randomNumber);
         setQuotes(randomQuote);
+        conole.log(randomNumber, randomQuote);
     }
 
     useEffect(() => {
@@ -31,7 +32,7 @@ const Home = () => {
 
     return (
         <div className="home">
-            <Navbar />
+            <Navbar handleFilter={handleFilter} />
             {isLoading && <div>Loading...</div>}
             {error && <div>{ error }</div>}
             {quotes && <QuoteDetails quotes={quotes.filter(quote => quote.id === randomNumber)}/>}

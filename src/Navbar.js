@@ -1,7 +1,7 @@
-const Navbar = () => {
+const Navbar = ({handleFilter}) => {
     return (
         <div className="navbar">
-            <button>random</button>
+            <button onClick={handleFilter}>random</button>
         </div>
     );
 }
