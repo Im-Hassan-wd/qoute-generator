@@ -5,6 +5,7 @@ const Home = () => {
     const [quotes, setQuotes] = useState(null);
     const [isLoading, setIsLoading,] = useState(true);
     const [error, setError] = useState(false);
+    const randomNumber = Math.ceil(Math.random() * 3);
 
     const handleFilter = () => {
         const randomNumber = Math.ceil(Math.random() * 3);
@@ -31,7 +32,7 @@ const Home = () => {
         <div className="home">
             {isLoading && <div>Loading...</div>}
             {error && <div>{ error }</div>}
-            {quotes && <QuoteDetails quotes={quotes.filter(quote => quote.id === Math.ceil(Math.random() * 3))}/>}
+            {quotes && <QuoteDetails quotes={quotes.filter(quote => quote.id === randomNumber)}/>}
         </div>
     );
 }

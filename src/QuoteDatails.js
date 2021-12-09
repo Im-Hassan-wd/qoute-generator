@@ -1,4 +1,6 @@
 const QuoteDetails = ({quotes}) => {
+
+    console.log(quotes)
     return (
         <div className="quote-details">
             {quotes.map(quote => (
