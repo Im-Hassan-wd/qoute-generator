@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import QuoteDetails from "./QuoteDatails";
+import Navbar from "./Navbar";
 
 const Home = () => {
     const [quotes, setQuotes] = useState(null);
@@ -30,6 +31,7 @@ const Home = () => {
 
     return (
         <div className="home">
+            <Navbar />
             {isLoading && <div>Loading...</div>}
             {error && <div>{ error }</div>}
             {quotes && <QuoteDetails quotes={quotes.filter(quote => quote.id === randomNumber)}/>}
