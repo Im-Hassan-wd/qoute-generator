@@ -6,13 +6,13 @@ const Home = () => {
     const [quotes, setQuotes] = useState(null);
     const [isLoading, setIsLoading,] = useState(true);
     const [error, setError] = useState(false);
+    const [number, setNumber] = useState(1);
     const randomNumber = Math.ceil(Math.random() * 3);
 
     const handleFilter = () => {
         const randomNumber = Math.ceil(Math.random() * 3);
         const randomQuote = quotes.filter(quote => quote.id === randomNumber);
         setQuotes(randomQuote);
-        setChange("");
         console.log(randomNumber, randomQuote);
     }
 
