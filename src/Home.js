@@ -6,14 +6,14 @@ const Home = () => {
     const [quotes, setQuotes] = useState(null);
     const [isLoading, setIsLoading,] = useState(true);
     const [error, setError] = useState(false);
-    const [number, setNumber] = useState(1);
-    const randomNumber = Math.ceil(Math.random() * 3);
+    const [number, setNumber] = useState(2);
 
     const handleFilter = () => {
         const randomNumber = Math.ceil(Math.random() * 3);
-        const randomQuote = quotes.filter(quote => quote.id === randomNumber);
+        setNumber(randomNumber);
+        const randomQuote = quotes.filter(quote => quote.id === number);
         setQuotes(randomQuote);
-        console.log(randomNumber, randomQuote);
+        console.log(randomNumber, number);
     }
 
     useEffect(() => {
@@ -36,7 +36,7 @@ const Home = () => {
             <Navbar handleFilter={handleFilter} />
             {isLoading && <div>Loading...</div>}
             {error && <div>{ error }</div>}
-            {quotes && <QuoteDetails quotes={quotes.filter(quote => quote.id === randomNumber)}/>}
+            {quotes && <QuoteDetails quotes={quotes.filter(quote => quote.id === number)}/>}
         </div>
     );
 }
