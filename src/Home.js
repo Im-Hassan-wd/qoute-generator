@@ -6,7 +6,6 @@ const Home = () => {
     const [quotes, setQuotes] = useState(null);
     const [isLoading, setIsLoading,] = useState(true);
     const [error, setError] = useState(false);
-    const [change, setChange] = useState("change");
     const randomNumber = Math.ceil(Math.random() * 3);
 
     const handleFilter = () => {
@@ -37,8 +36,7 @@ const Home = () => {
             <Navbar handleFilter={handleFilter} />
             {isLoading && <div>Loading...</div>}
             {error && <div>{ error }</div>}
-            {quotes && change === "change" ? <QuoteDetails quotes={quotes.filter(quote => quote.id === randomNumber)}/>: null}
-            {quotes && change === "" ? <QuoteDetails quotes={quotes}/>: null}
+            {quotes && <QuoteDetails quotes={quotes.filter(quote => quote.id === randomNumber)}/>}
         </div>
     );
 }
