@@ -6,7 +6,7 @@ const Home = () => {
     const [quotes, setQuotes] = useState(null);
     const [isLoading, setIsLoading,] = useState(true);
     const [error, setError] = useState(false);
-    const [number, setNumber] = useState(2);
+    let number = 0;
 
     const handleFilter = () => {
         const randomNumber = Math.ceil(Math.random() * 3);
