@@ -14,6 +14,11 @@ const Home = () => {
         window.location.reload();
     }
 
+    const handleClick = () => {
+        
+    }
+
+    const handle
     useEffect(() => {
         fetch(url)
          .then(res => {
