@@ -17,7 +17,7 @@ const Home = () => {
     console.log(url)
 
     const handleClick = (e) => {
-        const author = e.target.children[0];
+        const author = e.target.children[0].textContent;
         console.log(author)
         setUrl(`http://localhost:8000/quote/?author=${author}`);
         console.log(url)
