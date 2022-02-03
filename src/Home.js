@@ -8,7 +8,7 @@ const Home = () => {
     const [error, setError] = useState(false);
 
     const handleFilter = () => {
-        location.reload();
+        // location.reload();
     }
 
     useEffect(() => {
@@ -25,7 +25,8 @@ const Home = () => {
             setIsLoading(false);
          })
          .catch(err => {
-            // set
+            setError(err.message);
+            setIsLoading(false);
          });
     }, []);
 
@@ -34,7 +35,7 @@ const Home = () => {
             <Navbar handleFilter={handleFilter} />
             {isLoading && <div>Loading...</div>}
             {error && <div>{ error }</div>}
-            {quotes && <QuoteDetails quotes={quotes.filter(quote => quote.id === number)}/>}
+            {quotes && <QuoteDetails quotes={quotes.filter(quote => quote.id === Math.ceil(Math.random() * 3))}/>}
         </div>
     );
 }
