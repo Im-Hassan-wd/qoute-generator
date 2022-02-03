@@ -14,8 +14,13 @@ const Home = () => {
         window.location.reload();
     }
 
+    console.log(url)
+
     const handleClick = (e) => {
-        console.log(e.target.children[0]);
+        const author = e.target.children[0];
+        console.log(author)
+        setUrl(`http://localhost:8000/quote/?author=${author}`);
+        console.log(url)
     }
     
     useEffect(() => {
@@ -42,7 +47,7 @@ const Home = () => {
             <Navbar handleFilter={handleFilter} />
             {isLoading && <div>Loading...</div>}
             {error && <div>{ error }</div>}
-            {quotes && <QuoteDetails quotes={quotes.filter(quote => quote.id === randomNumber)} handleClick={handleClick} />}
+            {quotes && <QuoteDetails quotes={quotes} handleClick={handleClick} />}
         </div>
     );
 }
