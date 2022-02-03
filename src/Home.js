@@ -14,8 +14,8 @@ const Home = () => {
         window.location.reload();
     }
 
-    const handleClick = () => {
-        
+    const handleClick = (e) => {
+        console.log(e.target.children[0]);
     }
 
     const handle
@@ -43,7 +43,7 @@ const Home = () => {
             <Navbar handleFilter={handleFilter} />
             {isLoading && <div>Loading...</div>}
             {error && <div>{ error }</div>}
-            {quotes && <QuoteDetails quotes={quotes.filter(quote => quote.id === randomNumber)}/>}
+            {quotes && <QuoteDetails quotes={quotes.filter(quote => quote.id === randomNumber)} handleClick={handleClick} />}
         </div>
     );
 }
