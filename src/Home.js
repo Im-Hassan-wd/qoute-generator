@@ -17,8 +17,7 @@ const Home = () => {
     const handleClick = (e) => {
         console.log(e.target.children[0]);
     }
-
-    const handle
+    
     useEffect(() => {
         fetch(url)
          .then(res => {
