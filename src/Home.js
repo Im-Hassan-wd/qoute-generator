@@ -6,15 +6,9 @@ const Home = () => {
     const [quotes, setQuotes] = useState(null);
     const [isLoading, setIsLoading,] = useState(true);
     const [error, setError] = useState(false);
-    let number = 3;
 
     const handleFilter = () => {
-        const randomNumber = Math.ceil(Math.random() * 3);
-        number = randomNumber;
-        const randomQuote = quotes.filter(quote => quote.id === number);
-        setQuotes(randomQuote);
-        console.log(randomNumber, number, randomQuote);
-        // setQuotes(data);
+        location.reload();
     }
 
     useEffect(() => {
