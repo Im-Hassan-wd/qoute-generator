@@ -7,6 +7,7 @@ const Home = () => {
     const [quotes, setQuotes] = useState(null);
     const [isLoading, setIsLoading,] = useState(true);
     const [error, setError] = useState(false);
+    const [allQuotes, setAllAuotes] = useState("allquote");
     const [url, setUrl] = useState("http://localhost:8000/quote");
 
     const randomNumber = Math.ceil(Math.random() * 3);
@@ -48,8 +49,8 @@ const Home = () => {
             <Navbar handleFilter={handleFilter} />
             {isLoading && <div>Loading...</div>}
             {error && <div>{ error }</div>}
-            {quotes && <QuoteDetails quotes={quotes.filter(quote => quote.id === randomNumber)} handleClick={handleClick} />}
-            {quotes && <QuoteList quotes={quotes} />}
+            {quotes && allQuotes === "allquote" ? <QuoteDetails quotes={quotes.filter(quote => quote.id === randomNumber)} handleClick={handleClick} />}
+            {quotes && allQuotes === "allquote" ? <QuoteList quotes={quotes} /> : null}
         </div>
     );
 }
