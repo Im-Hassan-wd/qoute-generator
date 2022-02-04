@@ -16,13 +16,10 @@ const Home = () => {
         window.location.reload();
     }
 
-    console.log(url)
-
     const handleClick = (e) => {
         const author = e.target.children[0].textContent;
-        console.log(author)
         setUrl(`http://localhost:8000/quote/?author=${author}`);
-        console.log(url)
+        setAllAuotes("");
     }
     
     useEffect(() => {
@@ -49,8 +46,8 @@ const Home = () => {
             <Navbar handleFilter={handleFilter} />
             {isLoading && <div>Loading...</div>}
             {error && <div>{ error }</div>}
-            {quotes && allQuotes === "allquote" ? <QuoteDetails quotes={quotes.filter(quote => quote.id === randomNumber)} handleClick={handleClick} />}
-            {quotes && allQuotes === "allquote" ? <QuoteList quotes={quotes} /> : null}
+            {quotes && allQuotes === "allquote" ? <QuoteDetails quotes={quotes.filter(quote => quote.id === randomNumber)} handleClick={handleClick} /> : null}
+            {quotes && allQuotes === "" ? <QuoteList quotes={quotes} /> : null}
         </div>
     );
 }
