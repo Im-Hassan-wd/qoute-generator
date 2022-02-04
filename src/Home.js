@@ -47,7 +47,7 @@ const Home = () => {
             <Navbar handleFilter={handleFilter} />
             {isLoading && <div>Loading...</div>}
             {error && <div>{ error }</div>}
-            {quotes && <QuoteDetails quotes={quotes} handleClick={handleClick} />}
+            {quotes && <QuoteDetails quotes={quotes.filter(quote => quote.id === randomNumber)} handleClick={handleClick} />}
         </div>
     );
 }
