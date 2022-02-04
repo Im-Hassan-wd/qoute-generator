@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import QuoteDetails from "./QuoteDatails";
 import Navbar from "./Navbar";
+import QuoteList from "./QuoteList";
 
 const Home = () => {
     const [quotes, setQuotes] = useState(null);
@@ -48,6 +49,7 @@ const Home = () => {
             {isLoading && <div>Loading...</div>}
             {error && <div>{ error }</div>}
             {quotes && <QuoteDetails quotes={quotes.filter(quote => quote.id === randomNumber)} handleClick={handleClick} />}
+            {quotes && <QuoteList quotes={quotes} />}
         </div>
     );
 }
