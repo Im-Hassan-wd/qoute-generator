@@ -6,6 +6,8 @@ const Home = () => {
     const [quotes, setQuotes] = useState(null);
     const [isLoading, setIsLoading,] = useState(true);
     const [error, setError] = useState(false);
+    const [url, setUrl] = useState("http://localhost:8000/quote");
+
     const randomNumber = Math.ceil(Math.random() * 3);
 
     const handleFilter = () => {
@@ -13,7 +15,7 @@ const Home = () => {
     }
 
     useEffect(() => {
-        fetch("http://localhost:8000/quote")
+        fetch(url)
          .then(res => {
             if(!res.ok) {
                 throw Error("could not fetch the data for that resource");
@@ -29,7 +31,7 @@ const Home = () => {
             setError(err.message);
             setIsLoading(false);
          });
-    }, []);
+    }, [url]);
 
     return (
         <div className="home">

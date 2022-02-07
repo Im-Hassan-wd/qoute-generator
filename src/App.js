@@ -13,9 +13,9 @@ const App = () => {
             <Route exact path="/">
               <Home />
             </Route>
-            <Route path="/quote/:id">
+            {/* <Route path="/quote/:id">
               <QuoteList />
-            </Route>
+            </Route> */}
           </Switch>
         </div>
       </div>
