@@ -1,4 +1,4 @@
-const QuoteDetails = ({ quotes, handleClick }) => {
+const QuoteDetails = ({ quotes }) => {
 
     return (
         <div className="quote-details">
