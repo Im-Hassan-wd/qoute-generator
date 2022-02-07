@@ -9,7 +9,7 @@ const Home = () => {
     const randomNumber = Math.ceil(Math.random() * 3);
 
     const handleFilter = () => {
-        // location.reload();
+        window.location.reload();
     }
 
     useEffect(() => {
