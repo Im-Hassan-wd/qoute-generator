@@ -1,7 +1,6 @@
 import { useParams } from "react-router-dom";
 
 const QuoteList = ({ quotes }) => {
-    const { id } = useParams();
 
     return (
         <div className="quote-details">

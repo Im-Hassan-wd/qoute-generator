@@ -1,7 +1,6 @@
 import "./App.css";
 import Home from "./Home";
 import { BrowserRouter, Route, Switch } from "react-router-dom";
-import QuoteList from "./QuoteList";
 
 const App = () => {
 
