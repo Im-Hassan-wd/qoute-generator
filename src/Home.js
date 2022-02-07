@@ -13,7 +13,7 @@ const Home = () => {
     }
 
     useEffect(() => {
-        fetch("http://localhost:8000/quote")
+        fetch("data/db.json")
          .then(res => {
             if(!res.ok) {
                 throw Error("could not fetch the data for that resource");
