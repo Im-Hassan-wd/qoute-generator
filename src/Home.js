@@ -40,10 +40,10 @@ const Home = () => {
 
     return (
         <div className="home">
-            <Navbar handleFilter={handleFilter} />
+            <Navbar />
             {isLoading && <div>Loading...</div>}
             {error && <div>{ error }</div>}
-            {quotes && allQuotes === "allquote" ? <QuoteDetails quotes={quotes.filter(quote => quote.id === randomNumber)} /> : null}
+            {quotes && allQuotes === "allquote" ? <QuoteDetails quotes={quotes.filter(quote => quote.id === randomNumber)} handleClick={handleClick} /> : null}
             {quotes && allQuotes === "" ? <QuoteList quotes={quotes} /> : null}
         </div>
     );
