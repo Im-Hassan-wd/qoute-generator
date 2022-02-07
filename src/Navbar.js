@@ -1,7 +1,7 @@
 const Navbar = ({handleFilter}) => {
     return (
         <div className="navbar">
-            <button onClick={handleFilter}>random</button>
+            <button onClick={() => window.location.reload() }>random</button>
         </div>
     );
 }

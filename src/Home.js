@@ -14,7 +14,6 @@ const Home = () => {
 
     const handleClick = (e) => {
         const author = e.target.children[0].textContent;
-        console.log(author)
         setUrl(`http://localhost:8000/quote/?author=${author}`);
         setAllAuotes("");
     }
