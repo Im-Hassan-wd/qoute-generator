@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import QuoteDetails from "./QuoteDatails";
 import Navbar from "./Navbar";
 import QuoteList from "./QuoteList";
+import loading from "./loading.png";
 
 const Home = () => {
     const [quotes, setQuotes] = useState(null);
@@ -40,7 +41,7 @@ const Home = () => {
     return (
         <div className="home">
             <Navbar />
-            {isLoading && <div>Loading...</div>}
+            {isLoading && <div> <img src={loading} alt="loading..." /> </div>}
             {error && <div>{ error }</div>}
             {quotes && allQuotes === "allquote" ? <QuoteDetails quotes={quotes.filter(quote => quote.id === randomNumber)} handleClick={handleClick} /> : null}
             {quotes && allQuotes === "" ? <QuoteList quotes={quotes} /> : null}
