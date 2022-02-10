@@ -31,6 +31,16 @@
   animation: rotate 2s ease-in-out infinite;
 }
 
+.loading {
+  width: 50px;
+  margin: 20% auto;
+}
+
+.loading img {
+  width: 100%;
+  animation: rotate 2s ease-in-out infinite;
+}
+
 @keyframes rotate {
   from {
     transform: rotate(0deg);
