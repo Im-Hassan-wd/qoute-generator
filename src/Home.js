@@ -1,9 +1,13 @@
+import { useState } from "react";
+
 const Home = () => {
+    const [quotes, setQuotes] = useState(null);
+    const [isLoading, setIsLoading,] = useState(true);
+    const [error, setError] = useState(false);
+
     return (
         <div className="home">
-            <h2>
-                Home component
-            </h2>
+            
         </div>
     );
 }
