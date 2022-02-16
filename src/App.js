@@ -1,6 +1,7 @@
 import "./App.css";
 import Home from "./Home";
 import { BrowserRouter, Route, Switch } from "react-router-dom";
+import QuoteList from "./QuoteList";
 
 const App = () => {
 
@@ -11,6 +12,9 @@ const App = () => {
           <Switch>
             <Route exact path="/">
               <Home />
+            </Route>
+            <Route exact path="/quote/?author=:author">
+              <QuoteList />
             </Route>
           </Switch>
         </div>
