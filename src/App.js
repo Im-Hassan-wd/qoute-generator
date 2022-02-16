@@ -13,7 +13,7 @@ const App = () => {
             <Route exact path="/">
               <Home />
             </Route>
-            <Route exact path="/quote/?author=:author">
+            <Route path="/quote/2">
               <QuoteList />
             </Route>
           </Switch>
