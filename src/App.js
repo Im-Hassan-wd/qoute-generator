@@ -8,7 +8,11 @@ const App = () => {
     <BrowserRouter>
       <div className="app">
         <div className="content">
-          <Home />
+          <Switch>
+            <Route exact path="/">
+              <Home />
+            </Route>
+          </Switch>
         </div>
       </div>
     </BrowserRouter>
