@@ -10,7 +10,7 @@ const Home = () => {
     const [allQuotes, setAllAuotes] = useState("allquote");
     const [url, setUrl] = useState("http://localhost:8000/quote");
 
-    const randomNumber = Math.ceil(Math.random() * 3);
+    const randomNumber = Math.ceil(Math.random() * 5);
 
     const handleFilter = () => {
         window.location.reload();
