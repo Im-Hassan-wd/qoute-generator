@@ -26,6 +26,10 @@
   cursor: pointer;
 }
 
+.app button img {
+  padding: 0 5px;
+}
+
 /* home */
 .home {
   text-align: center;
