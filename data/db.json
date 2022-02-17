@@ -30,6 +30,12 @@
       "category": "Education",
       "id": 5,
       "body": "“Whoever is careless with the truth in small matters cannot be trusted with important matters.”"
+    },
+    {
+      "author": "Albert Einstein",
+      "category": "Funny",
+      "id": 6,
+      "body": "“Falling in love is not at all the most stupid thing that people do—but gravitation cannot be held responsible for it.”"
     }
   ]
 }
