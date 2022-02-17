@@ -5,7 +5,7 @@ const Navbar = () => {
         <div className="navbar">
             <button onClick={() => window.location.reload() }>
                 random
-                <img src={repeat} alt="generate icon" />
+                <img src={generate} alt="generate icon" />
             </button>
         </div>
     );
